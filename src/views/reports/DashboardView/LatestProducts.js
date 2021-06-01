@@ -53,9 +53,6 @@ const data = [
 ];
 
 const useStyles = makeStyles(({
-  root: {
-    height: '100%'
-  },
   image: {
     height: 48,
     width: 48

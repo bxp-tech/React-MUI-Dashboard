@@ -4,8 +4,27 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
 import MUIDataTable from 'mui-datatables';
+import {
+  makeStyles,
+  Card,
+  Button,
+  Box,
+  Divider,
+  CardHeader
+} from '@material-ui/core';
+import clsx from 'clsx';
+import { PropTypes } from 'prop-types';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
-export const NewTable = () => {
+const useStyles = makeStyles(() => ({
+  root: {},
+  actions: {
+    justifyContent: 'flex-end'
+  }
+}));
+
+export const NewTable = ({ className, ...rest }) => {
   const columns = ['Name', 'Company', 'City', 'State'];
 
   const data = [
@@ -54,12 +73,37 @@ export const NewTable = () => {
   const options = {
     filterType: 'checkbox'
   };
+
+  const classes = useStyles();
+
   return (
-    <MUIDataTable
-      title="Employee List"
-      data={data}
-      columns={columns}
-      options={options}
-    />
+    <Card className={clsx(classes.root, className)} {...rest}>
+      <CardHeader title="Latest Orders" />
+      <Divider />
+      <PerfectScrollbar>
+        <Box minWidth={800}>
+          <MUIDataTable
+            title="Employee List"
+            data={data}
+            columns={columns}
+            options={options}
+          />
+        </Box>
+      </PerfectScrollbar>
+      <Box display="flex" justifyContent="flex-end" p={2}>
+        <Button
+          color="primary"
+          endIcon={<ArrowRightIcon />}
+          size="small"
+          variant="text"
+        >
+          View all
+        </Button>
+      </Box>
+    </Card>
   );
+};
+
+NewTable.propTypes = {
+  className: PropTypes.string
 };
