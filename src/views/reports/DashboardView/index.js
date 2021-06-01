@@ -6,13 +6,14 @@ import {
 } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Budget from './Budget';
-import LatestOrders from './LatestOrders';
+// import LatestOrders from './LatestOrders';
 import LatestProducts from './LatestProducts';
 import Sales from './Sales';
 import TasksProgress from './TasksProgress';
 import TotalCustomers from './TotalCustomers';
 import TotalProfit from './TotalProfit';
 import TrafficByDevice from './TrafficByDevice';
+import { NewTable } from './NewTable';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -106,7 +107,7 @@ const Dashboard = () => {
             xl={9}
             xs={12}
           >
-            <LatestOrders />
+            <NewTable />
           </Grid>
         </Grid>
       </Container>
