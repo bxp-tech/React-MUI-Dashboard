@@ -7,7 +7,7 @@ import {
 import Page from 'src/components/Page';
 import Results from 'src/components/customer//Results';
 import Toolbar from 'src/components/customer//Toolbar';
-import data from 'src/components/customer//data';
+import data from 'src/__mocks__/customers';
 
 const useStyles = makeStyles((theme) => ({
   root: {

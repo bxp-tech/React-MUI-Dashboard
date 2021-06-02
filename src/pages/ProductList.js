@@ -9,7 +9,7 @@ import { Pagination } from '@material-ui/lab';
 import Page from 'src/components/Page';
 import Toolbar from 'src/components/product//Toolbar';
 import ProductCard from 'src/components/product//ProductCard';
-import data from 'src/components/product//data';
+import data from 'src/__mocks__/products';
 
 const useStyles = makeStyles((theme) => ({
   root: {
