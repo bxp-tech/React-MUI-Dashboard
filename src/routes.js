@@ -7,7 +7,7 @@ import MainLayout from 'src/layouts/MainLayout';
 // import DashboardView from 'src/views/reports/DashboardView';
 // import LoginView from 'src/views/auth/LoginView';
 // import NotFoundView from 'src/views/errors/NotFoundView';
-import ProductListView from 'src/views/product/ProductListView';
+// import ProductListView from 'src/views/product/ProductListView';
 import RegisterView from 'src/views/auth/RegisterView';
 import SettingsView from 'src/views/settings/SettingsView';
 import Dashboard from './pages/Dashboard';
@@ -15,6 +15,7 @@ import Account from './pages/Account';
 import CustomerList from './pages/CustomerList';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
+import ProductList from './pages/ProductList';
 
 const routes = [
   {
@@ -24,7 +25,7 @@ const routes = [
       { path: 'account', element: <Account /> },
       { path: 'customers', element: <CustomerList /> },
       { path: 'dashboard', element: <Dashboard /> },
-      { path: 'products', element: <ProductListView /> },
+      { path: 'products', element: <ProductList /> },
       { path: 'settings', element: <SettingsView /> },
       { path: '*', element: <Navigate to="/404" /> }
     ]
