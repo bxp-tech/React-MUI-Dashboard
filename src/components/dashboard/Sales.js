@@ -29,12 +29,20 @@ const Sales = ({ className, ...rest }) => {
       {
         backgroundColor: colors.indigo[500],
         data: [18, 5, 19, 27, 29, 19, 20],
-        label: 'This year'
+        label: 'This year',
+        barThickness: 12,
+        maxBarThickness: 10,
+        barPercentage: 0.5,
+        categoryPercentage: 0.5
       },
       {
         backgroundColor: colors.grey[200],
         data: [11, 20, 12, 29, 30, 25, 13],
-        label: 'Last year'
+        label: 'Last year',
+        barThickness: 12,
+        maxBarThickness: 10,
+        barPercentage: 0.5,
+        categoryPercentage: 0.5
       }
     ],
     labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug']
@@ -50,10 +58,6 @@ const Sales = ({ className, ...rest }) => {
     scales: {
       xAxes: [
         {
-          barThickness: 12,
-          maxBarThickness: 10,
-          barPercentage: 0.5,
-          categoryPercentage: 0.5,
           ticks: {
             fontColor: theme.palette.text.secondary
           },
